@@ -4,7 +4,16 @@ const router = express.Router();
 
 
 
-router.post("/signup", (req,res) => {
+router.post("/signup", async (req,res) => {
+ 
+    try {
+    const {username, password} = req.body;
+    if(!username || !password ){}
+        
+  } catch (error) {
+    
+  }
+  
     res.send.status(200).json({
         message : "signup routes",
     })
